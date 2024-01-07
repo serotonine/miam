@@ -26,7 +26,9 @@ class RecipeView extends View {
         return;
       }
       const { updateServings } = btnUpdateServings.dataset;
-      handler(+updateServings);
+      if (+updateServings > 0) {
+        handler(+updateServings);
+      }
     });
   }
   //// MARKUP ////
