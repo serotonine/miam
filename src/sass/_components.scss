@@ -152,10 +152,7 @@
   }
 }
 .btn--delete-recipe {
-  cursor: pointer;
-  &:hover {
-    background-color: red;
-  }
+  margin-left: 0.5rem;
 }
 .heading--2 {
   font-size: 2rem;

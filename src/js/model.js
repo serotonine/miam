@@ -62,7 +62,6 @@ export const uploadRecipe = async function (datas) {
     state.recipe = setStateRecipe(response);
     state.recipe.bookmarked = true;
     addBookmark(state.recipe);
-    console.log(`/// uploadRecipe /// =>`, state.recipe);
   } catch (error) {
     throw new Error(error);
   }
