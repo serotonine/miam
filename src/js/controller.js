@@ -105,8 +105,9 @@ const controlSearchRecipe = async function () {
 const controlSearchRecipeAutocomplete = function (word) {
   autocompleteView._clear();
   model.autocomplete(word);
-  autocompleteView.render(model.state.autocomplete);
-  //console.log(`model.state.autocomplete`, autocompleteView);
+  if (model.state.autocomplete.length > 0) {
+    autocompleteView.render(model.state.autocomplete);
+  }
 };
 const controlSelectTerm = function (word) {
   console.log(`controlSelectTerm`, word);

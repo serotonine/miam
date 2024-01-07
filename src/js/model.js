@@ -37,7 +37,7 @@ export const loadRecipe = async function (id) {
   try {
     const datas = await getAJAX(`${API_URL}${id}?key=${API_KEY}`);
     state.recipe = setStateRecipe(datas);
-    console.log(`loadRecipe`, state.recipe);
+    /*  console.log(`loadRecipe`, state.recipe); */
     // Set bookmarked.
     if (state.bookmarks.some((entry) => entry.id === state.recipe.id)) {
       state.recipe.bookmarked = true;
@@ -100,8 +100,12 @@ export const loadSearchResult = async function (query) {
 };
 
 export const autocomplete = function (word) {
-  const searchTerms = [...API_SEARCH_TERMS].sort();
   state.autocomplete = [];
+  if (word === "") {
+    return;
+  }
+  const searchTerms = [...API_SEARCH_TERMS].sort();
+
   const terms = searchTerms.filter((term) => term.startsWith(word));
   if (terms.length === 0) {
     return;

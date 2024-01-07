@@ -52,37 +52,11 @@ class AddRecipeView extends View {
       // Convert to array.
       let formDatas = [...new FormData(this)];
       that._fieldsets = this.querySelectorAll("fieldset.upload__ingredient");
-      /* // Group ingredients.
-      const ingredients = [];
-      this._fieldsets = this.querySelectorAll("fieldset.upload__ingredient");
-      let nbIngredients = this._fieldsets.length;
-      while (nbIngredients > 0) {
-        const ing = formDatas
-          .filter((el) => el[0].startsWith(`ingredient-${nbIngredients}`))
-          .map((el) => {
-            const term = el[0].split("-");
-            el[0] = term[2];
-            return el;
-          });
-        ingredients.push(Object.fromEntries(ing));
-        nbIngredients--;
-      }
-      // Check format.
-      ingredients.forEach((entry, index) => {
-        const { quantity } = entry;
-        if (isNaN(quantity)) {
-          //console.log(fieldsets[index + 1]);
-          this._fieldsets[index].insertAdjacentHTML(
-            "beforeend",
-            `<p class="error">${quantity}: only number! </p>`
-          );
-        }
-      }); */
       // Remove ingredients from formDatas.
       const noIngForm = formDatas.filter(
         (el) => !el[0].startsWith(`ingredient`)
       );
-      // Convert to an Object and add ingredients.
+      // Array to Object and add ingredients.
       const datas = Object.fromEntries(noIngForm);
       const ingredients = that._getIngredients(formDatas);
       if (ingredients) {
