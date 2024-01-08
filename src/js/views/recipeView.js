@@ -1,7 +1,10 @@
 import icons from "url:../../img/icons.svg";
 import View from "./View";
 import fracty from "fracty";
-
+/**
+ * Recipe section markup & events.
+ * @extends View
+ */
 class RecipeView extends View {
   //// HANDLERS ////
   /**

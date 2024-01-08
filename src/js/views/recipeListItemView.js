@@ -1,7 +1,7 @@
 import icons from "url:../../img/icons.svg";
 
 /**
- * Render recipe's items in search and bookmarks markup.
+ * Recipe's ingredients section markup & events.
  */
 class RecipeListItemView {
   _datas = undefined;

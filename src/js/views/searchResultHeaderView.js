@@ -2,11 +2,15 @@ import icons from "url:../../img/icons.svg";
 import View from "./View";
 import fracty from "fracty";
 
+/**
+ * Recipe search results header section markup.
+ * @extends View
+ */
 class SearchResultHeaderView extends View {
   //// MARKUP ////
   /**
-   *
-   * @returns
+   * Render Recipe search result title.
+   * @returns {string} - Markup
    */
   _renderMarkup() {
     return ` 

@@ -1,16 +1,16 @@
-import icons from "url:../../img/icons.svg";
 import View from "./View";
 import recipeListItemView from "./recipeListItemView";
-import fracty from "fracty";
 
+/**
+ * Add Recipe form section markup & events.
+ * @extends View
+ */
 class SearchResultView extends View {
-  //// MARKUP ////
   /**
-   *
-   * @returns
+   * Render Search result recipe items.
+   * @returns {string} - Markup.
    */
   _renderMarkup() {
-    //console.log(`SearchResultView > _renderMarkup`, this._datas);
     return this._datas
       .map((recipe) => recipeListItemView.renderRecipeListItem(recipe))
       .join("");

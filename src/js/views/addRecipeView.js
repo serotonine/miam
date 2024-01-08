@@ -1,5 +1,8 @@
 import View from "./View";
-
+/**
+ * Add Recipe form section markup & events.
+ * @extends View
+ */
 class AddRecipeView extends View {
   _errorMess = "Couille dans le potage";
   _successMess = "Recipe added !";

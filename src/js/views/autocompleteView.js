@@ -1,5 +1,8 @@
 import View from "./View";
-
+/**
+ * Search recipe Autocomplete section markup & events.
+ * @extends View
+ */
 class AutocompleteView extends View {
   //// HANDLER ////
   handlerSelectTerm(handler) {

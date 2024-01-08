@@ -1,3 +1,7 @@
+/**
+ * @description Search Recipe event handlers & query parsing.
+ * @class
+ */
 class SearchView {
   _parentElement = document.querySelector(".search__container");
   _input = this._parentElement.querySelector("input.search__field");
