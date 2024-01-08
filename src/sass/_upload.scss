@@ -23,6 +23,33 @@
     border: none;
     background: none;
   }
+  .upload__column--right > div:first-child {
+    margin-bottom: 1rem;
+    align-items: center;
+  }
+  .btn--add-ingredient {
+    width: 3rem;
+    height: 3rem;
+  }
+  fieldset {
+    padding: 1rem;
+    border: 1px $color-grey-light-3 solid;
+
+    border-radius: 0.5rem;
+    legend {
+      padding: 0 0.5rem;
+      font-size: 1.5em;
+      color: $color-grey-dark-2;
+    }
+    input:nth-child(n + 2) {
+      margin-right: 0.5rem;
+    }
+  }
+  .upload__error {
+    color: red;
+    font-size: 1.5rem;
+    padding-top: 1rem;
+  }
 }
 
 .overlay {
@@ -52,11 +79,6 @@
   }
 
   &__column {
-    /* display: grid;
-    grid-template-columns: 1fr 2.8fr;
-    align-items: start;
-    gap:  1.5rem;*/
-
     & label {
       font-size: 1.5rem;
       font-weight: 600;
@@ -92,7 +114,6 @@
     font-size: 2.25rem;
     font-weight: 700;
     text-transform: uppercase;
-    margin-bottom: 1rem;
     grid-column: 1/-1;
   }
 

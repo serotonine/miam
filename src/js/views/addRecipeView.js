@@ -1,11 +1,14 @@
-import icons from "url:../../img/icons.svg";
 import View from "./View";
-
+/**
+ * Add Recipe form section markup & events.
+ * @extends View
+ */
 class AddRecipeView extends View {
   _errorMess = "Couille dans le potage";
   _successMess = "Recipe added !";
   _addRecipeWindow = document.querySelector(".add-recipe-window");
   _overlay = document.querySelector(".overlay");
+  _fieldsets;
   _ingredient = {
     index: 1,
   };
@@ -46,36 +49,56 @@ class AddRecipeView extends View {
       .addEventListener("click", this._addIngredient.bind(this));
   }
   handlerUploadRecipe(handler) {
+    const that = this;
     this._parentElement.addEventListener("submit", function (e) {
       e.preventDefault();
       // Convert to array.
       let formDatas = [...new FormData(this)];
-      // Group ingredients.
-      const ingredients = [];
-      let nbIngredients = this.querySelectorAll(
-        "fieldset.upload__ingredient"
-      ).length;
-      while (nbIngredients > 0) {
-        const ing = formDatas.filter((el) =>
-          el[0].startsWith(`ingredient-${nbIngredients}`)
-        );
-        ing.map((el) => {
-          const term = el[0].split("-");
-          return el.splice(0, 1, `${term[2]}`);
-        });
-        ingredients.push(Object.fromEntries(ing));
-        nbIngredients--;
-      }
-      // Remove ingredients.
-      formDatas = [...new FormData(this)]; // Why reassign this?
+      that._fieldsets = this.querySelectorAll("fieldset.upload__ingredient");
+      // Remove ingredients from formDatas.
       const noIngForm = formDatas.filter(
         (el) => !el[0].startsWith(`ingredient`)
       );
-      // Convert to an Object and add ingredients.
+      // Array to Object and add ingredients.
       const datas = Object.fromEntries(noIngForm);
-      datas.ingredients = ingredients;
-      handler(datas);
+      const ingredients = that._getIngredients(formDatas);
+      if (ingredients) {
+        datas.ingredients = ingredients;
+        handler(datas);
+      }
     });
+  }
+  _getIngredients(formDatas) {
+    const ingredients = [];
+    let isOk = true;
+    let nbIngredients = this._fieldsets.length;
+    // Group ingredients.
+    while (nbIngredients > 0) {
+      const ing = formDatas
+        .filter((el) => el[0].startsWith(`ingredient-${nbIngredients}`))
+        .map((el) => {
+          const term = el[0].split("-");
+          el[0] = term[2];
+          return el;
+        });
+      ingredients.push(Object.fromEntries(ing));
+      nbIngredients--;
+    }
+    // Check format.
+    ingredients.forEach((entry, index) => {
+      const { quantity } = entry;
+      if (isNaN(quantity)) {
+        isOk = false;
+        this._fieldsets[index].insertAdjacentHTML(
+          "beforeend",
+          `<p class="upload__error"><strong>${quantity}</strong>: Quantity must be a number! </p>`
+        );
+      }
+    });
+    if (!isOk) {
+      return;
+    }
+    return ingredients;
   }
   //// DOM ////
   _renderIngredientMarkup() {

@@ -1,5 +1,8 @@
 import icons from "url:../../img/icons.svg";
-
+/**
+ * SuperClass render recipe markup & Event handlers.
+ * @class
+ */
 export default class View {
   _datas = {};
   _successMess = "";

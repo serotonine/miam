@@ -1,7 +1,10 @@
 import icons from "url:../../img/icons.svg";
 import View from "./View";
 import recipeListItemView from "./recipeListItemView";
-
+/**
+ * Recipe bookmarks section markup & events.
+ * @extends View
+ */
 class BookmarkView extends View {
   _bookmarkBtnContainer = document.querySelector(".recipe");
   _errorMess = "No bookmarks yet. Find a nice recipe and bookmark it :)";

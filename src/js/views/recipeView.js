@@ -1,7 +1,10 @@
 import icons from "url:../../img/icons.svg";
 import View from "./View";
 import fracty from "fracty";
-
+/**
+ * Recipe section markup & events.
+ * @extends View
+ */
 class RecipeView extends View {
   //// HANDLERS ////
   /**
@@ -26,7 +29,9 @@ class RecipeView extends View {
         return;
       }
       const { updateServings } = btnUpdateServings.dataset;
-      handler(+updateServings);
+      if (+updateServings > 0) {
+        handler(+updateServings);
+      }
     });
   }
   //// MARKUP ////
@@ -92,13 +97,7 @@ class RecipeView extends View {
         </button>
       </div>
     </div>
-    ${
-      this._datas.key
-        ? `<div class="recipe__user-generated btn--delete-recipe">
-       <svg><use href="${icons}#icon-user"></use></svg>
-     </div>`
-        : ""
-    }
+    
     <button class="btn--round btn--bookmark">
       <svg class="">
         <use href="${icons}#icon-bookmark${
@@ -106,6 +105,13 @@ class RecipeView extends View {
     }"></use>
       </svg>
     </button>
+    ${
+      this._datas.key
+        ? `<button class="btn--round btn--delete-recipe">
+       <svg><use href="${icons}#icon-delete"></use></svg>
+     </button>`
+        : ""
+    }
   </div>`;
   }
   _renderIngredients(ing) {

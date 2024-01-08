@@ -1,7 +1,7 @@
 /**
- *
- * @param {*} s
- * @returns
+ * Reject ajax after x seconds
+ * @param {number}
+ * @returns {Promise}
  */
 const timeout = function (s) {
   return new Promise(function (_, reject) {
@@ -12,9 +12,11 @@ const timeout = function (s) {
 };
 
 /**
- * API request
- * @param {*} url
- * @returns
+ * AJAX request - GET |POST
+ * @param {string} url - The Recipe API.
+ * @param {undefined|Object} - The recipe Object.
+ * @returns {JSON|Error}
+ * @async
  */
 export const getAJAX = async function (url, obj = undefined) {
   try {
@@ -38,6 +40,12 @@ export const getAJAX = async function (url, obj = undefined) {
     throw error;
   }
 };
+/**
+ * AJAX request DELETE
+ * @param {string} url - The Recipe API request.
+ * @returns {JSON|Error}
+ * @async
+ */
 export const deleteAJAX = async function (url) {
   try {
     const f = fetch(url, { method: "DELETE" });
