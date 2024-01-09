@@ -30,4 +30,4 @@ class BookmarkView extends View {
       .join("");
   }
 }
-export default bookmarkView = new BookmarkView(".bookmarks__list");
+export default new BookmarkView(".bookmarks__list");

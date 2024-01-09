@@ -19,6 +19,4 @@ class SearchResultHeaderView extends View {
   }
 }
 
-export default searchResultHeaderView = new SearchResultHeaderView(
-  ".search-results__header"
-);
+export default new SearchResultHeaderView(".search-results__header");

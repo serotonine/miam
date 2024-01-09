@@ -17,4 +17,4 @@ class SearchResultView extends View {
   }
 }
 
-export default searchResultView = new SearchResultView(".results");
+export default new SearchResultView(".results");

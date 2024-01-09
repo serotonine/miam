@@ -3,6 +3,7 @@ import icons from "url:../../img/icons.svg";
 import View from "./View";
 // Import constants
 import { RESULTS_BY_PAGE } from "../config";
+
 /**
  * Recipe search result pagination section markup & events.
  * @extends View
@@ -74,4 +75,4 @@ class PaginationView extends View {
       </div>`;
   }
 }
-export default paginationView = new PaginationView(".pagination");
+export default new PaginationView(".pagination");

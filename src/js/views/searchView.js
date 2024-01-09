@@ -32,4 +32,4 @@ class SearchView {
     return query;
   }
 }
-export default searchView = new SearchView();
+export default new SearchView();

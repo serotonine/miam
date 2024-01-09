@@ -38,4 +38,4 @@ class RecipeListItemView {
       : "";
   }
 }
-export default recipeListItemView = new RecipeListItemView();
+export default new RecipeListItemView();

@@ -114,7 +114,7 @@ const controlSelectTerm = function (word) {
   searchView.setQuery(word);
   autocompleteView._clear();
 };
-controlClearTerms = function () {
+const controlClearTerms = function () {
   autocompleteView._clear();
 };
 /// Pagination. ///
