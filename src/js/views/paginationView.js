@@ -1,4 +1,4 @@
-import icons from "url:../../img/icons.svg";
+import icons from "./icons.svg";
 // Parent Class
 import View from "./View";
 // Import constants

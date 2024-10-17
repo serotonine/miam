@@ -1,3 +1,4 @@
+import _ from "lodash";
 import recipeView from "./views/recipeView";
 import addRecipeView from "./views/addRecipeView";
 import searchView from "./views/searchView";
@@ -7,7 +8,6 @@ import paginationView from "./views/paginationView";
 import searchResultView from "./views/searchResultView";
 import bookmarkView from "./views/bookmarkView";
 import * as model from "./model";
-import addRecipeView from "./views/addRecipeView";
 
 // Handlers
 /**
