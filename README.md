@@ -6,7 +6,7 @@
 [https://github.com/serotonine/miam](https://github.com/serotonine/miam)
 
 ### About
-Rebuilt from scratch and enhance Udemy [https://x.com/jonasschmedtman](Jonas Schmedtmann) Forkify application: [https://www.udemy.com/course/the-complete-javascript-course/learn/lecture/22664157#overview](see Udemy course).
+Rebuilt from scratch and enhance Udemy (Jonas Schmedtmann)[https://x.com/jonasschmedtman] Forkify application: (see Udemy course)[https://www.udemy.com/course/the-complete-javascript-course/learn/lecture/22664157#overview].
 
 ***
 
