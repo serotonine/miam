@@ -1,46 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>miam // Search over 1,000,000 recipes</title>
-    <link
-      href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,600,700"
-      rel="stylesheet"
-    />
-    <link rel="shortcut icon" href="src/img/favicon.png" type="image/x-icon" />
-    <link rel="stylesheet" href="src/sass/main.scss" />
-    <script defer type="module" src="src/js/controller.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,600,700" rel="stylesheet" />
+    <link rel="shortcut icon" href="./src/img/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="./src/css/style.css" />
+    <!-- <script defer type="module" src="src/js/controller.js"></script> -->
+    <script src="main.js"></script>
 
-    <body>
-    
-  </head>
+  <body>
+  
+    </head>
     <div class="container">
       <header class="header">
-        <img src="src/img/logo.png" alt="Logo" class="header__logo" />
+        <img src="./src/img/logo.png" alt="Logo" class="header__logo" />
         <div class="search__container">
-           <form class="search">
-          <input
-            type="text"
-            class="search__field"
-            placeholder="Search over 1,000,000 recipes..."
-          />
-          <button class="btn search__btn">
-            <svg class="search__icon">
-              <use href="src/img/icons.svg#icon-search"></use>
-            </svg>
-            <span>Search</span>
-          </button>
-        </form>
-        <div class="autocomplete"></div>
+          <form class="search">
+            <input type="text" class="search__field" placeholder="Search over 1,000,000 recipes..." />
+            <button class="btn search__btn">
+              <svg class="search__icon">
+                <use href="./src/img/icons.svg#icon-search"></use>
+                </svg>
+                <span>Search</span>
+                </button>
+                </form>
+                <div class="autocomplete"></div>
         </div>
         <nav class="nav">
           <ul class="nav__list">
             <li class="nav__item">
               <button class="nav__btn nav__btn--add-recipe">
                 <svg class="nav__icon">
-                  <use href="src/img/icons.svg#icon-edit"></use>
+                  <use href="./src/img/icons.svg#icon-edit"></use>
                 </svg>
                 <span>Add recipe</span>
               </button>
@@ -48,7 +43,7 @@
             <li class="nav__item">
               <button class="nav__btn nav__btn--bookmarks">
                 <svg class="nav__icon">
-                  <use href="src/img/icons.svg#icon-bookmark"></use>
+                  <use href="./src/img/icons.svg#icon-bookmark"></use>
                 </svg>
                 <span>Bookmarks</span>
               </button>
@@ -57,7 +52,7 @@
                   <div class="message">
                     <div>
                       <svg>
-                        <use href="src/img/icons.svg#icon-smile"></use>
+                        <use href="./src/img/icons.svg#icon-smile"></use>
                       </svg>
                     </div>
                     <p>
@@ -78,12 +73,8 @@
         </div>
         <p class="copyright">
           &copy; Copyright by
-          <a
-            class="twitter-link"
-            target="_blank"
-            href="https://twitter.com/jonasschmedtman"
-            >Jonas Schmedtmann</a
-          >. Use for learning or your portfolio. Don't use to teach. Don't claim
+          <a class="twitter-link" target="_blank" href="https://twitter.com/jonasschmedtman">Jonas Schmedtmann</a>. Use
+          for learning or your portfolio. Don't use to teach. Don't claim
           as your own.
         </p>
       </div>
@@ -91,7 +82,7 @@
         <div class="message">
           <div>
             <svg>
-              <use href="src/img/icons.svg#icon-smile"></use>
+              <use href="./src/img/icons.svg#icon-smile"></use>
             </svg>
           </div>
           <p>Start by searching for a recipe or an ingredient. Have fun!</p>
@@ -108,9 +99,12 @@
           <label>Title</label>
           <input value="Aubergines farcies" required name="title" type="text" />
           <label>URL</label>
-          <input value="https://www.undejeunerdesoleil.com/2020/08/aubergines-farcies-viande-feta.html" required name="sourceUrl" type="text" />
+          <input value="https://www.undejeunerdesoleil.com/2020/08/aubergines-farcies-viande-feta.html" required name="sourceUrl"
+            type="text" />
           <label>Image URL</label>
-          <input value="https://www.undejeunerdesoleil.com/wp-content/uploads/2020/08/Aubergines_farcies_viande_recette_astuces.jpg" required name="image" type="text" />
+          <input
+            value="https://www.undejeunerdesoleil.com/wp-content/uploads/2020/08/Aubergines_farcies_viande_recette_astuces.jpg"
+            required name="image" type="text" />
           <label>Publisher</label>
           <input value="Un déjeuner au soleil" required name="publisher" type="text" />
           <label>Prep time</label>
@@ -121,61 +115,45 @@
         <div class="upload__column upload__column--right">
           <div class="flex flex-sp">
             <h3 class="upload__heading "><span>Ingredients</span>
-              </h3>
-              <div class="btn--tiny btn--add-ingredient" title="Add ingredient">
-                <svg>
-                  <use href="src/img/icons.svg#icon-plus-circle"></use>
+            </h3>
+            <div class="btn--tiny btn--add-ingredient" title="Add ingredient">
+              <svg>
+                <use href="./src/img/icons.svg#icon-plus-circle"></use>
                 </svg>
-              </div>
+                </div>
           </div>
-       
-          
+
+
           <fieldset class="upload__ingredient" data-index="1">
             <legend>Ingredient 1</legend>
             <div class="upload__ingredient-container">
-            <div>
-              <label for="ingredient-1-quantity">Quantity</label>
-            <input
-              value="0.5"
-              type="text"
-              name="ingredient-1-quantity"
-              id="ingredient-1-quantity"
-              placeholder="Quantity"
-              size="5"
-            /></div>
-            <div>
-              <label for="ingredient-1-unit">Unit</label>
-            <input
-              value="kg"
-              type="text"
-              name="ingredient-1-unit"
-              id="ingredient-1-unit"
-              placeholder="unit: e.g. kg, spoon..."
-              size="5"
-            />
-          </div>
-            <div><label for="ingredient-1-description">Description</label>
-            <input
-              value="0.5"
-              type="text"
-              required
-              name="ingredient-1-description"
-              id="ingredient-1-description"
-              placeholder="Description"
-            />
-          </div>
-        </div>
+              <div>
+                <label for="ingredient-1-quantity">Quantity</label>
+                <input value="0.5" type="text" name="ingredient-1-quantity" id="ingredient-1-quantity" placeholder="Quantity"
+                  size="5" />
+                </div>
+                <div>
+                  <label for="ingredient-1-unit">Unit</label>
+                <input value="kg" type="text" name="ingredient-1-unit" id="ingredient-1-unit" placeholder="unit: e.g. kg, spoon..."
+                  size="5" />
+                </div>
+                <div><label for="ingredient-1-description">Description</label>
+                <input value="0.5" type="text" required name="ingredient-1-description" id="ingredient-1-description"
+                  placeholder="Description" />
+                </div>
+                </div>
           </fieldset>
-          
+
         </div>
-      
+
         <button class="btn upload__btn" type="submit">
           <svg>
-            <use href="src/img/icons.svg#icon-upload-cloud"></use>
+            <use href="./src/img/icons.svg#icon-upload-cloud"></use>
           </svg>
           <span>Upload</span>
         </button>
       </form>
     </div>
   </body>
+
 </html>

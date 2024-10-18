@@ -140,4 +140,4 @@ class AddRecipeView extends View {
   </fieldset>`;
   }
 }
-export default addRecipeView = new AddRecipeView(".upload");
+export default new AddRecipeView(".upload");

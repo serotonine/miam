@@ -1,4 +1,4 @@
-import icons from "url:../../img/icons.svg";
+import icons from "./icons.svg";
 /**
  * SuperClass render recipe markup & Event handlers.
  * @class

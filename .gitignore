@@ -1,4 +1,5 @@
-dist
 .DS_Store
 node_modules
-.parcel-cache
+package-lock.json
+*.psd
+*.css.map

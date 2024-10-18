@@ -1,4 +1,3 @@
-import icons from "url:../../img/icons.svg";
 import View from "./View";
 import recipeListItemView from "./recipeListItemView";
 /**
@@ -11,12 +10,13 @@ class BookmarkView extends View {
   //// HANDLERS ///
   handlerAddBookmark(handler) {
     this._bookmarkBtnContainer.addEventListener("click", function (e) {
-      e.preventDefault();
       const btn = e.target.closest(".btn--bookmark");
-      if (!btn) {
+      if (btn) {
+        e.preventDefault();
+        handler();
+      } else {
         return;
       }
-      handler();
     });
   }
   handlerBookmarksStorage(handler) {
@@ -30,4 +30,4 @@ class BookmarkView extends View {
       .join("");
   }
 }
-export default bookmarkView = new BookmarkView(".bookmarks__list");
+export default new BookmarkView(".bookmarks__list");

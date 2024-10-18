@@ -1,4 +1,4 @@
-import icons from "url:../../img/icons.svg";
+import icons from "../../img/icons.svg";
 
 /**
  * Recipe's ingredients section markup & events.
@@ -38,4 +38,4 @@ class RecipeListItemView {
       : "";
   }
 }
-export default recipeListItemView = new RecipeListItemView();
+export default new RecipeListItemView();

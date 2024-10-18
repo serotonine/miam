@@ -1,4 +1,3 @@
-import icons from "url:../../img/icons.svg";
 import View from "./View";
 import fracty from "fracty";
 
@@ -19,6 +18,4 @@ class SearchResultHeaderView extends View {
   }
 }
 
-export default searchResultHeaderView = new SearchResultHeaderView(
-  ".search-results__header"
-);
+export default new SearchResultHeaderView(".search-results__header");

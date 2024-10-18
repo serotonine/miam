@@ -33,4 +33,4 @@ class AutocompleteView extends View {
     </div>`;
   }
 }
-export default autocompleteView = new AutocompleteView(".autocomplete");
+export default new AutocompleteView(".autocomplete");

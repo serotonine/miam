@@ -19,10 +19,10 @@
       left: 0;
       background-image: linear-gradient(
         to right bottom,
-        $color-grad-1,
-        $color-grad-2
+        $color-grad-1, 
+        $color-grad-3
       );
-      opacity: 0.6;
+      opacity: 0.3;
     }
   }
 
@@ -52,8 +52,8 @@
       padding: 1.3rem 2rem;
       background-image: linear-gradient(
         to right bottom,
-        $color-grad-1,
-        $color-grad-2
+        $color-grad-3,
+        $color-grad-4
       );
     }
 

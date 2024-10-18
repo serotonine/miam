@@ -1,4 +1,4 @@
-import icons from "url:../../img/icons.svg";
+import icons from "../../img/icons.svg";
 import View from "./View";
 import fracty from "fracty";
 /**
@@ -119,7 +119,7 @@ class RecipeView extends View {
     <svg class="recipe__icon">
       <use href="${icons}#icon-check"></use>
     </svg>
-    <div class="recipe__quantity">${fracty(ing.quantity)}</div>
+   ${this._renderQuantity(ing.quantity)}
     <div class="recipe__description">
       <span class="recipe__unit">${ing.unit}</span>
       <span>${ing.description}</span>
@@ -146,5 +146,11 @@ class RecipeView extends View {
     </a>
   </div>`;
   }
+  _renderQuantity(quantity) {
+    if (quantity > 0) {
+      return `<div class="recipe__quantity">${fracty(quantity)}</div>`;
+    }
+    return "";
+  }
 }
-export default recipeView = new RecipeView(".recipe");
+export default new RecipeView(".recipe");
