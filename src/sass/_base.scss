@@ -1,15 +1,20 @@
 // $color-primary: #f59a83;
-$color-primary: #f38e82;
-$color-grad-1: #fbdb89;
-$color-grad-2: #f48982;
+$color-primary:hsl(111, 50%, 32%);//#f38e82;
+$color-grad-1: hsl(47, 97%, 58%);//#fbdb89;
+$color-grad-2: hsl(97, 63%, 79%);//#f48982;
+$color-grad-3: hsl(50, 100%, 95%);
+$color-grad-4: hsl(97, 63%, 50%);//#f48982;
 
-$color-grey-light-1: #f9f5f3; // Light background
-$color-grey-light-2: #f2efee; // Light lines
-$color-grey-light-3: #d3c7c3; // Light text (placeholder)
-$color-grey-dark-1: #615551; // Normal text
-$color-grey-dark-2: #918581; // Lighter text
 
-$gradient: linear-gradient(to right bottom, $color-grad-1, $color-grad-2);
+$color-grey-light-1: hsl(40, 23%, 97%);// Light background
+$color-grey-light-2: hsl(43, 13%, 90%); // Light lines
+$color-grey-light-3: hsl(40, 15%, 80%);// Light text (placeholder)
+$color-grey-dark-1: hsl(38, 11%, 28%); // Normal text
+$color-grey-dark-2: hsl(41, 8%, 48%); // Lighter text
+
+$gradient: linear-gradient(to right bottom, $color-grad-2, $color-grad-3);
+$gradient-btn: linear-gradient(to right bottom, $color-grad-2, $color-grad-4);
+$gradient-img: linear-gradient(to right bottom, $color-grad-1, $color-grad-2);
 
 $bp-large: 78.15em; // 1250px
 $bp-medium: 61.25em; // 980px
