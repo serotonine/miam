@@ -23,8 +23,8 @@ body {
   font-family: "Nunito Sans", sans-serif;
   font-weight: 400;
   line-height: 1.6;
-  color: #615551;
-  background-image: linear-gradient(to right bottom, #fbdb89, #f48982);
+  color: rgb(79, 73, 64);
+  background-image: linear-gradient(to right bottom, hsl(97, 63%, 79%), hsl(50, 100%, 95%));
   background-size: cover;
   background-repeat: no-repeat;
   min-height: calc(100vh - 8vw);
@@ -37,7 +37,7 @@ body {
   background-color: #fff;
   border-radius: 9px;
   overflow: hidden;
-  box-shadow: 0 2rem 6rem 0.5rem rgba(97, 85, 81, 0.2);
+  box-shadow: 0 2rem 6rem 0.5rem rgba(79, 73, 64, 0.2);
   display: grid;
   grid-template-rows: 10rem minmax(100rem, auto);
   grid-template-columns: 1fr 2fr;
@@ -60,7 +60,7 @@ body {
 }
 
 .btn--small, .btn--small:link, .btn--small:visited, .btn {
-  background-image: linear-gradient(to right bottom, #fbdb89, #f48982);
+  background-image: linear-gradient(to right bottom, hsl(97, 63%, 79%), hsl(97, 63%, 50%));
   border-radius: 10rem;
   border: none;
   text-transform: uppercase;
@@ -104,11 +104,11 @@ body {
 }
 
 .btn--inline {
-  color: #f38e82;
+  color: hsl(111, 50%, 32%);
   font-size: 1.3rem;
   font-weight: 600;
   border: none;
-  background-color: #f9f5f3;
+  background-color: hsl(40, 23%, 97%);
   padding: 0.8rem 1.2rem;
   border-radius: 10rem;
   cursor: pointer;
@@ -126,15 +126,15 @@ body {
   margin: 0 0.4rem;
 }
 .btn--inline:hover {
-  color: #f48982;
-  background-color: #f2efee;
+  color: hsl(97, 63%, 79%);
+  background-color: hsl(43, 13%, 90%);
 }
 .btn--inline:focus {
   outline: none;
 }
 
 .btn--round {
-  background-image: linear-gradient(to right bottom, #fbdb89, #f48982);
+  background-image: linear-gradient(to right bottom, hsl(97, 63%, 79%), hsl(97, 63%, 50%));
   border-radius: 50%;
   border: none;
   cursor: pointer;
@@ -167,18 +167,18 @@ body {
 .btn--tiny svg {
   height: 100%;
   width: 100%;
-  fill: #f38e82;
+  fill: hsl(111, 50%, 32%);
   transition: all 0.3s;
 }
 .btn--tiny:focus {
   outline: none;
 }
 .btn--tiny:hover svg {
-  fill: #f48982;
+  fill: hsl(97, 63%, 79%);
   transform: translateY(-1px);
 }
 .btn--tiny:active svg {
-  fill: #f48982;
+  fill: hsl(97, 63%, 79%);
   transform: translateY(0);
 }
 .btn--tiny:not(:last-child) {
@@ -192,7 +192,7 @@ body {
 .heading--2 {
   font-size: 2rem;
   font-weight: 700;
-  color: #f38e82;
+  color: hsl(111, 50%, 32%);
   text-transform: uppercase;
   margin-bottom: 2.5rem;
   text-align: center;
@@ -200,7 +200,7 @@ body {
 
 .link:link,
 .link:visited {
-  color: #918581;
+  color: hsl(41, 8%, 48%);
 }
 
 .spinner {
@@ -210,7 +210,7 @@ body {
 .spinner svg {
   height: 6rem;
   width: 6rem;
-  fill: #f38e82;
+  fill: hsl(111, 50%, 32%);
   animation: rotate 2s infinite linear;
 }
 
@@ -233,7 +233,7 @@ body {
 .error svg {
   height: 3rem;
   width: 3rem;
-  fill: #f38e82;
+  fill: hsl(111, 50%, 32%);
   transform: translateY(-0.3rem);
 }
 .message p,
@@ -246,7 +246,7 @@ body {
 
 .header {
   grid-area: head;
-  background-color: #f9f5f3;
+  background-color: hsl(40, 23%, 97%);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -267,7 +267,7 @@ body {
 }
 .search:focus-within {
   transform: translateY(-2px);
-  box-shadow: 0 0.7rem 3rem rgba(97, 85, 81, 0.08);
+  box-shadow: 0 0.7rem 3rem rgba(79, 73, 64, 0.08);
 }
 .search__field {
   border: none;
@@ -281,7 +281,7 @@ body {
   outline: none;
 }
 .search__field::placeholder {
-  color: #d3c7c3;
+  color: hsl(40, 15%, 80%);
 }
 @media only screen and (max-width: 61.25em) {
   .search__field {
@@ -326,7 +326,7 @@ body {
 .nav__btn svg {
   height: 2.4rem;
   width: 2.4rem;
-  fill: #f38e82;
+  fill: hsl(111, 50%, 32%);
   margin-right: 0.7rem;
   transform: translateY(-1px);
 }
@@ -334,7 +334,7 @@ body {
   outline: none;
 }
 .nav__btn:hover {
-  background-color: #f2efee;
+  background-color: hsl(43, 13%, 90%);
 }
 
 .bookmarks {
@@ -344,7 +344,7 @@ body {
   z-index: 10;
   width: 40rem;
   background-color: #fff;
-  box-shadow: 0 0.8rem 5rem 2rem rgba(97, 85, 81, 0.1);
+  box-shadow: 0 0.8rem 5rem 2rem rgba(79, 73, 64, 0.1);
   visibility: hidden;
   opacity: 0;
   transition: all 0.5s 0.2s;
@@ -361,7 +361,7 @@ body {
   transition: all 0.3s;
 }
 .bookmarks__field:hover {
-  background-color: #f2efee;
+  background-color: hsl(43, 13%, 90%);
 }
 .bookmarks:hover, .nav__btn--bookmarks:hover + .bookmarks {
   visibility: visible;
@@ -377,11 +377,11 @@ body {
   text-decoration: none;
 }
 .preview__link:hover {
-  background-color: #f9f5f3;
+  background-color: hsl(40, 23%, 97%);
   transform: translateY(-2px);
 }
 .preview__link--active {
-  background-color: #f9f5f3;
+  background-color: hsl(40, 23%, 97%);
 }
 .preview__fig {
   flex: 0 0 5.8rem;
@@ -400,7 +400,7 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  background-image: linear-gradient(to right bottom, #fbdb89, #f48982);
+  background-image: linear-gradient(to right bottom, hsl(47, 97%, 58%), hsl(97, 63%, 79%));
   opacity: 0.4;
 }
 .preview__fig img {
@@ -420,7 +420,7 @@ body {
 .preview__title {
   grid-column: 1/-1;
   font-size: 1.45rem;
-  color: #f38e82;
+  color: hsl(111, 50%, 32%);
   text-transform: uppercase;
   font-weight: 600;
   text-overflow: ellipsis;
@@ -430,12 +430,12 @@ body {
 }
 .preview__publisher {
   font-size: 1.15rem;
-  color: #918581;
+  color: hsl(41, 8%, 48%);
   text-transform: uppercase;
   font-weight: 600;
 }
 .preview__user-generated {
-  background-color: rgb(237.58, 233.56, 232.22);
+  background-color: hsl(43, 13%, 88%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -448,7 +448,7 @@ body {
 .preview__user-generated svg {
   height: 1.2rem;
   width: 1.2rem;
-  fill: #f38e82;
+  fill: hsl(111, 50%, 32%);
 }
 
 .search-results {
@@ -480,7 +480,7 @@ body {
   grid-row: 1;
   text-align: center;
   font-size: 1.3rem;
-  color: #918581;
+  color: hsl(41, 8%, 48%);
 }
 .pagination__btn--prev {
   grid-column: 1;
@@ -492,18 +492,18 @@ body {
 }
 
 .copyright {
-  color: #918581;
+  color: hsl(41, 8%, 48%);
   font-size: 1.2rem;
   padding: 0 3.5rem;
   margin-top: 4rem;
 }
 .copyright .twitter-link:link,
 .copyright .twitter-link:visited {
-  color: #918581;
+  color: hsl(41, 8%, 48%);
 }
 
 .recipe {
-  background-color: #f9f5f3;
+  background-color: hsl(40, 23%, 97%);
 }
 .recipe__fig {
   height: 32rem;
@@ -518,8 +518,8 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  background-image: linear-gradient(to right bottom, #fbdb89, #f48982);
-  opacity: 0.6;
+  background-image: linear-gradient(to right bottom, hsl(47, 97%, 58%), hsl(50, 100%, 95%));
+  opacity: 0.3;
 }
 .recipe__img {
   width: 100%;
@@ -544,7 +544,7 @@ body {
   -webkit-box-decoration-break: clone;
   box-decoration-break: clone;
   padding: 1.3rem 2rem;
-  background-image: linear-gradient(to right bottom, #fbdb89, #f48982);
+  background-image: linear-gradient(to right bottom, hsl(50, 100%, 95%), hsl(97, 63%, 50%));
 }
 @media only screen and (max-width: 61.25em) {
   .recipe__title {
@@ -568,7 +568,7 @@ body {
 .recipe__info-icon {
   height: 2.35rem;
   width: 2.35rem;
-  fill: #f38e82;
+  fill: hsl(111, 50%, 32%);
   margin-right: 1.15rem;
 }
 .recipe__info-data {
@@ -581,7 +581,7 @@ body {
   transform: translateY(-1px);
 }
 .recipe__user-generated {
-  background-color: rgb(237.58, 233.56, 232.22);
+  background-color: hsl(43, 13%, 88%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -594,13 +594,13 @@ body {
 .recipe__user-generated svg {
   height: 2.25rem;
   width: 2.25rem;
-  fill: #f38e82;
+  fill: hsl(111, 50%, 32%);
 }
 .recipe__ingredients {
   padding: 5rem 8rem;
   font-size: 1.6rem;
   line-height: 1.4;
-  background-color: #f2efee;
+  background-color: hsl(43, 13%, 90%);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -617,7 +617,7 @@ body {
 .recipe__icon {
   height: 2rem;
   width: 2rem;
-  fill: #f38e82;
+  fill: hsl(111, 50%, 32%);
   margin-right: 1.1rem;
   flex: 0 0 auto;
   margin-top: 0.1rem;
@@ -637,7 +637,7 @@ body {
   font-size: 1.7rem;
   text-align: center;
   margin-bottom: 3.5rem;
-  color: #918581;
+  color: hsl(41, 8%, 48%);
 }
 .recipe__publisher {
   font-weight: 700;
@@ -677,13 +677,13 @@ body {
 }
 .add-recipe-window fieldset {
   padding: 1rem;
-  border: 1px #d3c7c3 solid;
+  border: 1px hsl(40, 15%, 80%) solid;
   border-radius: 0.5rem;
 }
 .add-recipe-window fieldset legend {
   padding: 0 0.5rem;
   font-size: 1.5em;
-  color: #918581;
+  color: hsl(41, 8%, 48%);
 }
 .add-recipe-window fieldset input:nth-child(n+2) {
   margin-right: 0.5rem;
@@ -732,12 +732,12 @@ body {
   transition: all 0.2s;
 }
 .upload__column input::placeholder {
-  color: #d3c7c3;
+  color: hsl(40, 15%, 80%);
 }
 .upload__column input:focus {
   outline: none;
-  border: 1px solid #f38e82;
-  background-color: #f9f5f3;
+  border: 1px solid hsl(111, 50%, 32%);
+  background-color: hsl(40, 23%, 97%);
 }
 .upload__column button {
   grid-column: 1/span 2;
@@ -771,17 +771,17 @@ body {
   width: 100%;
 }
 .search__container .autocomplete__term {
-  color: #918581;
+  color: hsl(41, 8%, 48%);
   cursor: pointer;
   font-size: 1.7rem;
   padding: 1rem 2rem;
 }
 .search__container .autocomplete__term:not(:last-child) {
-  border-bottom: 1px solid #d3c7c3;
+  border-bottom: 1px solid hsl(40, 15%, 80%);
 }
 .search__container .autocomplete__term:hover {
-  background-color: #f9f5f3;
-  color: #615551;
+  background-color: hsl(40, 23%, 97%);
+  color: rgb(79, 73, 64);
 }
 
 /*# sourceMappingURL=style.css.map */

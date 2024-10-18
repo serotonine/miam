@@ -10,12 +10,13 @@ class BookmarkView extends View {
   //// HANDLERS ///
   handlerAddBookmark(handler) {
     this._bookmarkBtnContainer.addEventListener("click", function (e) {
-      e.preventDefault();
       const btn = e.target.closest(".btn--bookmark");
-      if (!btn) {
+      if (btn) {
+        e.preventDefault();
+        handler();
+      } else {
         return;
       }
-      handler();
     });
   }
   handlerBookmarksStorage(handler) {
